@@ -1,0 +1,30 @@
+/*
+ COMMON STYLE
+ The file contain common style for all pages
+
+ Update list of part here
+
+ # UI Guide Part
+
+*/
+
+// # UI Guide Part
+.guide{
+  &_container{
+    @apply container mx-auto mb-5 md:mb-20
+  }
+  &_title{
+    @apply bg-gradient-to-br from-sky-500 to-teal-500 text-white font-extrabold pl-5 py-2
+  }
+  &_inner{
+    @apply
+    border
+    border-teal-500
+    flex items-center
+    justify-center
+    p-5
+    flex-wrap
+    gap-5;
+  }
+}
+

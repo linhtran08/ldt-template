@@ -1,0 +1,31 @@
+{
+  "assets/images/icon/i_submit.svg": {
+    "file": "assets/images/icon/i_submit.svg",
+    "src": "assets/images/icon/i_submit.svg"
+  },
+  "assets/images/icon/i_down.svg": {
+    "file": "assets/images/icon/i_down.svg",
+    "src": "assets/images/icon/i_down.svg"
+  },
+  "assets/images/card_img1.png": {
+    "file": "assets/images/card_img1.png",
+    "src": "assets/images/card_img1.png"
+  },
+  "assets/images/icon/i_arrow.svg": {
+    "file": "assets/images/icon/i_arrow.svg",
+    "src": "assets/images/icon/i_arrow.svg"
+  },
+  "assets/images/card_blog1.png": {
+    "file": "assets/images/card_blog1.png",
+    "src": "assets/images/card_blog1.png"
+  },
+  "assets/images/icon/i_edu.svg": {
+    "file": "assets/images/icon/i_edu.svg",
+    "src": "assets/images/icon/i_edu.svg"
+  },
+  "styles/main.scss": {
+    "file": "assets/styles/main.css",
+    "src": "styles/main.scss",
+    "isEntry": true
+  }
+}

@@ -1,0 +1,93 @@
+{% extends "templates/layout/main.twig" %}
+
+{% block title %}UX Guide{% endblock %}
+
+{% block main %}
+  <main class="guide">
+
+    {# Component Buttons #}
+    {% embed 'templates/blocks/container-wrap.twig' with {title: 'Component Buttons'} %}
+      {% block inner %}
+        {% include components ~ 'button/button.twig' with
+          {
+            text : 'Say Hello!' ,
+            type : 'default'
+          } %}
+        {% include  components ~ 'button/button.twig' with
+          {
+            text : 'Submit' ,
+            type : 'button_icon',
+            icon :  img_base ~ 'icon/i_submit.svg',
+          } %}
+        {% include  components ~ 'button/button.twig' with
+          {
+            text : 'Download CV' ,
+            type : 'button_icon button_outline flex-row-reverse',
+            icon : img_base ~ 'icon/i_down.svg',
+          } %}
+      {% endblock %}
+    {% endembed %}
+
+    {# Component card Work #}
+    {% embed 'templates/blocks/container-wrap.twig' with {title: 'Component card Work'} %}
+      {% block inner %}
+        {% for item in [1,2,3] %}
+          {% include  components ~ 'card/card-work.twig' with
+            {
+              subtitle : 'UI-UX DESIGN',
+              imgUrl : img_base ~ 'card_img1.png',
+              subtitle : 'UI-UX DESIGN',
+              title: 'Product Admin Dashboard',
+              content: 'Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.'
+            } %}
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+
+    {# Component card Blog #}
+    {% embed 'templates/blocks/container-wrap.twig' with {title: 'Component card Blog'} %}
+      {% block inner %}
+        {% for item in [1,2,3] %}
+          {% include  components ~ 'card/card-blog.twig' with
+            {
+              date : '22 Oct, 2020 / 246 Comments',
+              imgUrl : img_base ~ 'card_blog1.png',
+              content: 'There are many variations of passages of Lorem Ipsum available,but the majority have suffered alteration.'
+            } %}
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+
+    {# Component card Process #}
+    {% embed 'templates/blocks/container-wrap.twig' with {title: 'Component card Process'} %}
+      {% block inner %}
+        {% for item in
+          [
+            {
+              title : '1. Research',
+              imgUrl : img_base ~ 'icon/i_edu.svg',
+              content : 'There are many variations of passages of Lorem Ipsum available',
+            },
+            {
+              title : '1. Research',
+              imgUrl : img_base ~ 'icon/i_edu.svg',
+              content : 'There are many variations of passages of Lorem Ipsum available',
+            },
+            {
+              title : '1. Research',
+              imgUrl : img_base ~ 'icon/i_edu.svg',
+              content : 'There are many variations of passages of Lorem Ipsum available',
+            }
+          ] %}
+          {% include  components ~ 'card/card-process.twig' with
+            {
+              title : item.title,
+              imgUrl : item.imgUrl,
+              content: item.content
+            } %}
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+
+  </main>
+{% endblock %}

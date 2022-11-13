@@ -1,0 +1,6 @@
+<button class="button {{ type != 'default' ? type : '' }}">
+  <span class="button_inner">{{ text }}</span>
+  {% if icon %}
+  <img loading="lazy" class="button_icon_img" src="{{ icon }}" alt="{{ text }}">
+  {% endif %}
+</button>

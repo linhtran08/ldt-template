@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  html{
+    font-family: 'Work Sans', sans-serif;
+  }
+}
+
+.main{
+  @apply text-2xl
+}
+
+// Common init
+@import "common/common";
+@import "common/mixin";
+
+// Components init
+@import "components/button";
+@import "components/card";

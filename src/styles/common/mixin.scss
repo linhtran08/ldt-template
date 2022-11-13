@@ -1,0 +1,78 @@
+/*
+ COMMON MIXIN
+ The file contain many mixin
+ please add mixin with description and fully detail of guide
+ Update list of mixin here
+
+ # Create keyframes with prefix css
+ # Fade out animation
+ # Fade in animation
+ # Create background gradient with parameters
+ # {mixin name}
+ # Center using flex
+ # Center using absolute
+*/
+
+// # Create keyframes with prefix css
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// # Fade out animation
+@include keyframes(fade-out) {
+  0% { opacity: 1; }
+  90% { opacity: 0; }
+}
+
+// # Fade in aniamtion
+@include keyframes(fade-in) {
+  0% { opacity: 0; }
+  90% { opacity: 1; }
+}
+
+/*
+ # Create background gradient with parameters
+ $orientation : vertical | horizontal
+*/
+@mixin background-gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+
+  @if $orientation == 'vertical' {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  } @else if $orientation == 'horizontal' {
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+  } @else {
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}
+
+// # Center using flex
+@mixin flex-center{
+  @apply flex items-center justify-center
+}
+
+// # Center using absolute
+@mixin ab-center{
+  @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2
+}
+
+@mixin hover-shadow{
+  @apply hover:shadow-[0px_12px_64px_0px_rgba(28,25,25,0.12)];
+}

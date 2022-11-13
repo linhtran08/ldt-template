@@ -1,0 +1,17 @@
+<div class="card_work">
+  <div class="card_work_img">
+    <img loading="lazy" class="img" src="{{ imgUrl }}" alt="{{ imgTitle }}">
+  </div>
+  <div class="card_work_main">
+    <div class="card_work_main_inner">
+      <p class="card_work_subtitle">{{ subtitle }}</p>
+      <h3 class="card_work_title">{{ title }}</h3>
+      <p class="card_work_para">{{ content }}</p>
+      {% include '../button/button.twig' with {
+        text : 'Case Study' ,
+        icon : img_base ~ 'icon/i_arrow.svg',
+        type : 'button_outline buton_icon'
+      } %}
+    </div>
+  </div>
+</div>

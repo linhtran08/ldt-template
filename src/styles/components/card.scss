@@ -1,0 +1,107 @@
+/* ------------------------------ Card Components ------------------------------ */
+.card{
+
+  /* ------------------------------ Card Word ------------------------------ */
+  &_work{
+    @apply rounded-[8px] transition w-full md:w-[30%] xl:w-[424px] ;
+    border: 1px solid #E6E8EB;
+    &:hover{
+      @include hover-shadow;
+    }
+    &_main{
+      @apply p-[8%] md:p-[32px];
+      &_inner{
+
+      }
+    }
+    &_subtitle{
+      color: #87909D;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+    &_title{
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+    &_para{
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+  //  Custom another component
+    .button{
+      margin-top: 20px;
+    }
+  }
+
+  /* ------------------------------ Card Blog ------------------------------ */
+  &_blog{
+    @apply rounded-[8px] transition w-full md:w-[25%] xl:w-[312px] ;
+    border: 1px solid #E6E8EB;
+    &:hover{
+      @include hover-shadow;
+    }
+    &_main{
+      @apply p-[6%] md:p-[24px];
+      &_inner{
+
+      }
+    }
+    &_date{
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #87909D;
+    }
+    &_para{
+      margin-top: 8px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      color: #333333;
+    }
+  }
+
+  /* ------------------------------ Card Blog ------------------------------ */
+  &_process{
+    @apply rounded-[8px] transition w-full md:w-[25%] xl:w-[312px] ;
+    border: 1px solid #E6E8EB;
+    &:hover{
+      @apply shadow-[32px_32px_124px_0px_rgba(43,56,76,0.1)]
+    }
+    &_main{
+      @apply p-[4%] md:p-[32px];
+      &_inner{
+
+      }
+    }
+    &_img{
+      color: #8431CC;
+      @apply w-[32px] h-[32px];
+      @include flex-center;
+    }
+    &_ttl{
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #132238;
+    }
+    &_para{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #556070;
+    }
+  }
+}

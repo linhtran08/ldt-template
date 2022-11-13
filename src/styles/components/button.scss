@@ -1,0 +1,36 @@
+/* ------------------------------ Component Button ------------------------------ */
+.button{
+  @apply px-[3%] py-[1%] md:py-[12px] md:px-[24px] gap-x-[3vw] md:gap-x-[12px] text-xs md:text-[16px];
+  @apply transition;
+  border: 1px solid #A53DFF;
+  background: #A53DFF;
+  color: #fff;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+  border-radius: 4px;
+  @include flex-center;
+  &:hover{
+    background: #8431CC;
+  }
+  &_inner{
+    @apply flex-shrink-0 ;
+  }
+  /* ------------------------------ Button outline  ------------------------------ */
+  &_outline{
+    color: #A53DFF;
+    background: #fff;
+    &:hover{
+      color: #8431CC;
+      background: #fff;
+      border: 1px solid #8431CC;
+    }
+  }
+  /* ------------------------------ Button has icon  ------------------------------ */
+  &_icon{
+    &_img{
+      @apply w-[25%] md:w-[auto]
+    }
+  }
+}

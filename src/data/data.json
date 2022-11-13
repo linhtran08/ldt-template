@@ -1,0 +1,7 @@
+{
+  "templates": {
+    "main" : "templates/layout/main.twig"
+  },
+  "components" : "templates/components/",
+  "img_base" : "../assets/images/"
+}
