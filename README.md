@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a style="font-size: 24px; font-weight: bold" href="https://github.com/linhtran08?tab=repositories">
+  <a id="readme-top" style="font-size: 24px; font-weight: bold" href="https://github.com/linhtran08?tab=repositories">
     LTD
   </a>
 
@@ -65,6 +65,7 @@ Of course, no one template will serve all projects since your needs may be diffe
 * [![Vitejs][Vitejs]][Vitejs-url]
 * [![Twig][Twig]][Twig-url]
 * [![Tailwind][tailwind]][tailwind-url]
+* [![Sass][Sass]][Sass-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -143,3 +144,5 @@ Project Link: [https://github.com/linhtran08/ldt-template](https://github.com/li
 [Twig-url]: https://twig.symfony.com/
 [Vitejs]: https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white
 [Vitejs-url]: https://vitejs.dev/
+[Sass]: https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white
+[Sass-url]: https://sass-lang.com/
