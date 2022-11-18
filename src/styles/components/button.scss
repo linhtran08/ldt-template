@@ -2,8 +2,8 @@
 .button{
   @apply px-[3%] py-[1%] md:py-[12px] md:px-[24px] gap-x-[3vw] md:gap-x-[12px] text-xs md:text-[16px];
   @apply transition;
-  border: 1px solid #A53DFF;
-  background: #A53DFF;
+  border: 1px solid $c_primary_500;
+  background: $c_primary_500;
   color: #fff;
   font-weight: 600;
   line-height: 24px;
@@ -12,19 +12,19 @@
   border-radius: 4px;
   @include flex-center;
   &:hover{
-    background: #8431CC;
+    background: $c_primary_600;
   }
   &_inner{
     @apply flex-shrink-0 ;
   }
   /* ------------------------------ Button outline  ------------------------------ */
   &_outline{
-    color: #A53DFF;
+    color: $c_primary_600;
     background: #fff;
     &:hover{
-      color: #8431CC;
+      color: $c_primary_600;
       background: #fff;
-      border: 1px solid #8431CC;
+      border: 1px solid $c_primary_600;
     }
   }
   /* ------------------------------ Button has icon  ------------------------------ */
@@ -33,4 +33,17 @@
       @apply w-[25%] md:w-[auto]
     }
   }
+}
+
+.button_label{
+  @apply flex justify-center items-center;
+  &_normal{
+    @apply p-[4vw] md:p-[30px] lg:p-[15px]
+  }
+  &_big{
+    @apply p-[5.3vw] md:p-[40px] lg:p-[20px]
+  }
+  &_puple{
+  }
+  img{}
 }
