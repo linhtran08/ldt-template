@@ -1,7 +1,38 @@
 {
-  "templates": {
-    "main" : "templates/layout/main.twig"
+  "g_templates": {
+    "main": "templates/layout/main.twig"
   },
-  "components" : "templates/components/",
-  "img_base" : "../assets/images/"
+  "g_components": "templates/components/",
+  "g_blocks": "templates/blocks/",
+  "g_img_base": "/assets/images/",
+  "g_routes" : [
+    {
+      "name" : "Home",
+      "path" : "/"
+    },
+    {
+      "name" : "About",
+      "path" : "#about"
+    },
+    {
+      "name" : "Process",
+      "path" : "#process"
+    },
+    {
+      "name" : "Portfolio",
+      "path" : "/portfolio"
+    },
+    {
+      "name" : "Blog",
+      "path" : "#blog"
+    },
+    {
+      "name" : "Services",
+      "path" : "#services"
+    },
+    {
+      "name" : "Contact",
+      "path" : "#contact"
+    }
+  ]
 }

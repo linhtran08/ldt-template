@@ -1,0 +1,12 @@
+/* ------------------------------ Component Logo ------------------------------ */
+.logo{
+  @apply flex items-center space-x-[12px];
+  &_icon{
+    @apply text-[24px] font-medium;
+  }
+  &_text{
+    @apply text-[32px] text-[#132238] font-semibold;
+  }
+  /* ------------------------------ logo top ------------------------------ */
+
+}

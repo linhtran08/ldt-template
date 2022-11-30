@@ -74,20 +74,17 @@
   /* ------------------------------ Card Blog ------------------------------ */
   &_process{
     @apply rounded-[8px] transition w-full md:w-[25%] xl:w-[312px] ;
-    border: 1px solid #E6E8EB;
     &:hover{
       @apply shadow-[32px_32px_124px_0px_rgba(43,56,76,0.1)]
+    }
+    &_img{
+      @apply px-[4%] md:px-[32px] pt-[4%] md:pt-[32px]
     }
     &_main{
       @apply p-[4%] md:p-[32px];
       &_inner{
 
       }
-    }
-    &_img{
-      color: #8431CC;
-      @apply w-[32px] h-[32px];
-      @include flex-center;
     }
     &_ttl{
       font-size: 20px;
@@ -103,5 +100,33 @@
       letter-spacing: 0;
       color: #556070;
     }
+  }
+
+  /* ------------------------------ Card Address ------------------------------ */
+  &_address{
+    @apply flex items-start p-[6vw] lg:p-[24px] space-x-[3.2vw] lg:space-x-[13px] rounded-[10px];
+    @include hover-shadow;
+    &_title{
+      @apply text-[14px] text-[#424E60] font-normal
+    }
+    &_para{
+      @apply text-[18px] text-[#132238] font-medium
+    }
+  }
+
+  /* ------------------------------ Card Experience ------------------------------ */
+  &_experience{
+    @apply p-[8.5vw] lg:p-[32px] rounded-[6px] max-w-[640px];
+    @include hover-shadow;
+    &:hover{
+      @apply border-l-[5px] border-l-[#A53DFF] pl-[27px]
+    }
+    &_title{
+      @apply text-[24px] font-semibold text-[#132238]
+    }
+    &_content{
+      @apply text-[16px] text-[#556070] font-normal mt-[8px]
+    }
+
   }
 }

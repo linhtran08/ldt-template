@@ -1,6 +1,6 @@
 <div class="card_process">
   <div class="card_process_img">
-    <img loading="lazy" class="img" src="{{ imgUrl }}" alt="{{ imgTitle }}">
+    {% include '../button/button-label.twig' with {iconUrl : imgUrl, className: 'button_label_big button_label_puple'} %}
   </div>
   <div class="card_process_main">
     <div class="card_process_main_inner">

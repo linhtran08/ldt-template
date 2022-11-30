@@ -28,3 +28,24 @@
   }
 }
 
+// # Container
+.g_container{
+  width: 100%;
+  overflow: hidden;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  @media (min-width: theme('screens.sm')) {
+    width: 1320px;
+    max-width: 1320px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+// # Animation intoView
+.track_view{
+  @apply opacity-0 transform translate-y-20 transition duration-500 ease-in-out;
+  &.active_view{
+    @apply opacity-100 transform translate-y-0;
+  }
+}

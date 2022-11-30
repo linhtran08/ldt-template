@@ -1,0 +1,79 @@
+.hero{
+  &_inner{
+    @apply flex items-stretch justify-between pt-[126px] pb-[222px] ;;
+  }
+  &_left{
+    @apply
+      w-[48.9%]
+      flex
+      flex-col
+    ;
+  }
+  &_right{
+    @apply
+    w-[40.6%] h-[636px]
+    flex-shrink-0 rounded-[25px]
+    bg-white shadow-[0px_24px_116px_0px_rgba(43,56,76,0.1)]
+    ;
+  }
+  &_title{
+    @apply
+      text-[72px]
+      text-[#132238]
+      font-semibold
+      mt-[55px]
+      leading-[84px]
+    ;
+  }
+  &_para{
+    @apply
+      mt-[10px]
+      text-[18px]
+      text-[#556070]
+      font-normal
+      leading-[24px]
+    ;
+    strong{
+     @apply text-[var(--primary-500)] ;
+    }
+  }
+  &_button{
+    @apply
+      w-[126px]
+      mt-[36px]
+    ;
+  }
+  &_overview{
+    @apply
+      w-full
+      flex
+      space-x-[3px]
+      mt-auto
+    ;
+    &_item{
+      @apply
+        flex-1
+        flex
+        items-center
+        flex-col
+        justify-center
+        h-[106px]
+        bg-[#EDD8FF]
+      ;
+      .item_para1{
+        @apply
+          font-semibold
+          text-[32px]
+          text-[#424E60]
+        ;
+      }
+      .item_para2{
+        @apply
+          text-[16px]
+          text-[#697484]
+          font-normal
+        ;
+      }
+    }
+  }
+}

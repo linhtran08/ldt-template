@@ -1,0 +1,13 @@
+.nav{
+  @apply flex items-center;
+  &_top{
+
+  }
+  &_link{
+    @apply
+    py-[12px] px-[24px]
+    text-[#333] font-medium text-[16px] rounded-[4px]
+    hover:bg-[var(--primary-500)] hover:text-white
+    ;
+  }
+}

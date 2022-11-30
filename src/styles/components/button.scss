@@ -35,15 +35,52 @@
   }
 }
 
+/* ------------------------------ Button Label  ------------------------------ */
 .button_label{
   @apply flex justify-center items-center;
+  /* ------------------------------ Size control ------------------------------ */
   &_normal{
-    @apply p-[4vw] md:p-[30px] lg:p-[15px]
+    @apply
+    p-[4vw] md:p-[30px] lg:p-[15px]
+    w-[48px]
+    h-[48px]
+    rounded-[4px]
   }
   &_big{
-    @apply p-[5.3vw] md:p-[40px] lg:p-[20px]
+    @apply
+    p-[5.3vw] md:p-[40px] lg:p-[20px]
+    w-[72px]
+    h-[72px]
+    rounded-[6px]
+
+  }
+  /* ------------------------------ Variant control ------------------------------ */
+  &_white{
+    background-color: #fff;
+    .button_label_img{
+      filter: invert(65%) sepia(96%) saturate(3117%) hue-rotate(249deg) brightness(99%) contrast(108%);
+    }
+    &:hover{
+      background-color: $c_primary_500;
+      .button_label_img{
+        filter: none;
+      }
+    }
   }
   &_puple{
+    background-color: $c_primary_100;
+    .button_label_img{
+      filter: invert(65%) sepia(96%) saturate(3117%) hue-rotate(249deg) brightness(99%) contrast(108%);
+    }
+    &:hover{
+      background-color: $c_primary_500;
+      .button_label_img{
+        filter: none;
+      }
+    }
   }
-  img{}
+  &_circle{
+    @apply rounded-full text-white uppercase;
+    background-color: $c_primary_500;
+  }
 }

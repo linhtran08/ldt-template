@@ -3,9 +3,12 @@ import twig from "@vituum/twig";
 import tailwind from "@vituum/tailwind";
 
 export default defineConfig({
+	input: ['./src/views/**/*.html','./src/assets/images/*.{jpg,jpeg,webp,png,svg}', './src/emails/*.html', './src/styles/*.{css,pcss,scss,sass,less,styl,stylus}', './src/scripts/*.{js,ts,mjs}'],
 	// your config goes here
 	integrations: [
-		twig(),
+		twig({
+			data: 'src/data/**/*.json'
+		}),
 		tailwind()
 	],
 	templates: {

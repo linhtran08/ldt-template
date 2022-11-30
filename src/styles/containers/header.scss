@@ -1,0 +1,6 @@
+.header{
+  @apply py-[20px] sticky top-0 flex items-center backdrop-blur-md bg-white/30;
+  &_inner{
+    @apply flex items-center justify-between
+  }
+}

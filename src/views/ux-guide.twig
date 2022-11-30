@@ -1,4 +1,4 @@
-{% extends "templates/layout/main.twig" %}
+{% extends g_templates.main %}
 
 {% block title %}UX Guide{% endblock %}
 
@@ -6,36 +6,51 @@
   <main class="guide">
 
     {# Component Buttons #}
-    {% embed 'templates/blocks/container-wrap.twig' with {title: 'Component Buttons'} %}
+    {% embed g_blocks ~ 'container-wrap.twig' with {title: 'Component Buttons'} %}
       {% block inner %}
-        {% include components ~ 'button/button.twig' with
+        {% include g_components ~ 'button/button.twig' with
           {
             text : 'Say Hello!' ,
             type : 'default'
           } %}
-        {% include  components ~ 'button/button.twig' with
+        {% include  g_components ~ 'button/button.twig' with
           {
             text : 'Submit' ,
             type : 'button_icon',
-            icon :  img_base ~ 'icon/i_submit.svg',
+            icon :  g_img_base ~ 'icon/i_submit.svg',
           } %}
-        {% include  components ~ 'button/button.twig' with
+        {% include  g_components ~ 'button/button.twig' with
           {
             text : 'Download CV' ,
             type : 'button_icon button_outline flex-row-reverse',
-            icon : img_base ~ 'icon/i_down.svg',
+            icon : g_img_base ~ 'icon/i_down.svg',
+          } %}
+        {% include  g_components ~ 'button/button-label.twig' with
+          {
+            className : 'button_label_big button_label_puple',
+            iconUrl : g_img_base ~ 'icon/i_edu.svg',
+          } %}
+        {% include  g_components ~ 'button/button-label.twig' with
+          {
+            className : 'button_label_normal button_label_white',
+            iconUrl : g_img_base ~ 'icon/i_edu.svg',
+          } %}
+        {% include  g_components ~ 'button/button-label.twig' with
+          {
+            className : 'button_label_normal button_label_white button_label_circle',
+            iconUrl : g_img_base ~ 'icon/i_edu.svg',
           } %}
       {% endblock %}
     {% endembed %}
 
     {# Component card Work #}
-    {% embed 'templates/blocks/container-wrap.twig' with {title: 'Component card Work'} %}
+    {% embed g_blocks ~ 'container-wrap.twig' with {title: 'Component card Work'} %}
       {% block inner %}
         {% for item in [1,2,3] %}
-          {% include  components ~ 'card/card-work.twig' with
+          {% include  g_components ~ 'card/card-work.twig' with
             {
               subtitle : 'UI-UX DESIGN',
-              imgUrl : img_base ~ 'card_img1.png',
+              imgUrl : g_img_base ~ 'card_img1.png',
               subtitle : 'UI-UX DESIGN',
               title: 'Product Admin Dashboard',
               content: 'Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.'
@@ -45,13 +60,13 @@
     {% endembed %}
 
     {# Component card Blog #}
-    {% embed 'templates/blocks/container-wrap.twig' with {title: 'Component card Blog'} %}
+    {% embed g_blocks ~ 'container-wrap.twig' with {title: 'Component card Blog'} %}
       {% block inner %}
         {% for item in [1,2,3] %}
-          {% include  components ~ 'card/card-blog.twig' with
+          {% include  g_components ~ 'card/card-blog.twig' with
             {
               date : '22 Oct, 2020 / 246 Comments',
-              imgUrl : img_base ~ 'card_blog1.png',
+              imgUrl : g_img_base ~ 'card_blog1.png',
               content: 'There are many variations of passages of Lorem Ipsum available,but the majority have suffered alteration.'
             } %}
         {% endfor %}
@@ -59,33 +74,82 @@
     {% endembed %}
 
     {# Component card Process #}
-    {% embed 'templates/blocks/container-wrap.twig' with {title: 'Component card Process'} %}
+    {% embed g_blocks ~ 'container-wrap.twig' with {title: 'Component card Process'} %}
       {% block inner %}
         {% for item in
           [
             {
               title : '1. Research',
-              imgUrl : img_base ~ 'icon/i_edu.svg',
+              imgUrl : g_img_base ~ 'icon/i_edu.svg',
               content : 'There are many variations of passages of Lorem Ipsum available',
             },
             {
               title : '1. Research',
-              imgUrl : img_base ~ 'icon/i_edu.svg',
+              imgUrl : g_img_base ~ 'icon/i_edu.svg',
               content : 'There are many variations of passages of Lorem Ipsum available',
             },
             {
               title : '1. Research',
-              imgUrl : img_base ~ 'icon/i_edu.svg',
+              imgUrl : g_img_base ~ 'icon/i_edu.svg',
               content : 'There are many variations of passages of Lorem Ipsum available',
             }
           ] %}
-          {% include  components ~ 'card/card-process.twig' with
+          {% include  g_components ~ 'card/card-process.twig' with
             {
               title : item.title,
               imgUrl : item.imgUrl,
               content: item.content
             } %}
         {% endfor %}
+      {% endblock %}
+    {% endembed %}
+
+    {# Component card Address #}
+    {% embed g_blocks ~ 'container-wrap.twig' with {title: 'Component card Address'} %}
+      {% block inner %}
+        {% for item in
+          [
+            {
+              imgUrl : g_img_base ~ 'icon/i_map.svg',
+              content : 'New Mexico 31134',
+            },
+            {
+              imgUrl : g_img_base ~ 'icon/i_map.svg',
+              content : 'New Mexico 31134',
+            },
+            {
+              imgUrl : g_img_base ~ 'icon/i_map.svg',
+              content : 'New Mexico 31134',
+            }
+          ] %}
+          {% include  g_components ~ 'card/card-address.twig' with
+            {
+              imgUrl : item.imgUrl,
+              content: item.content
+            } %}
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+
+    {# Component card experience #}
+    {% embed g_blocks ~ 'container-wrap.twig' with {title: 'Component card experience'} %}
+      {% block inner %}
+        {% embed g_components ~ 'card/card-experience.twig' %}
+          {% block title %}
+            User Experience (UX)
+          {% endblock %}
+          {% block content %}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum.
+          {% endblock %}
+        {% endembed %}
+        {% embed g_components ~ 'card/card-experience.twig' %}
+          {% block title %}
+            User Experience (UX)
+          {% endblock %}
+          {% block content %}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum.
+          {% endblock %}
+        {% endembed %}
       {% endblock %}
     {% endembed %}
 
